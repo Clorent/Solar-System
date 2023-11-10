@@ -15,6 +15,47 @@ body {
     position: relative;
 }
 
+.container::after {
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    background-color: white;
+    box-shadow: 20em 2em white,
+                34em 5em white,
+                8em 8em white,
+                32em 12em white,
+                -2em 15em white,
+                4em 18em white,
+                34em 22em white,
+                42em 25em white,
+                4em 28em white,
+                12em 32em white,
+                35em 35em white,
+                8em 38em white;
+}
+
+.container::before {
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    background-color: white;
+    box-shadow: -2em 2em white,
+                11em 5em white,
+                1em 8em white,
+                18em 12em white,
+                10em 15em white,
+                12em 18em white,
+                39em 13em white,
+                2em 40em white,
+                28em 28em white,
+                -4em 32em white,
+                32em 29em white,
+                24em 38em white;
+    animation: shine 2s infinite;
+}
+
 .sun {
     position: absolute;
     top: 15em; 
@@ -82,3 +123,14 @@ body {
         transform: rotate(360deg);
     }
 }
+
+ @keyframes shine {
+         0%, 100% {
+                opacity: 0.5;
+            }
+         50% {
+                opacity: 1;
+            }
+   }
+    
+
